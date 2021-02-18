@@ -1,0 +1,55 @@
+/*Оформление навбара*/
+.header {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+.site-nav {
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+  .link {
+    color: #{$title-text-color};
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms #{$cubic-transition};
+    &:hover,
+    &:focus {
+      color: #{$accent-color};
+    }
+    &.current{
+      color: #{$accent-color};
+    }
+  }
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+.nav-link, .address-link {
+  align-items: center;
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.nav-link {
+  position: relative;
+  &.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #{$accent-color};
+    border-radius: 2px;
+  }
+}

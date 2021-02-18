@@ -1,0 +1,27 @@
+/*Оформление лого*/
+%logo {
+  margin-right: 93px;
+  color:#000000;
+  font-family: Raleway, italic;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  &:focus {
+    color: #{$accent-color};
+  }
+}
+.logo-header {
+  @extend %logo;
+}
+.logo-footer {
+  @extend %logo;
+  color: #{$primary-background-color};
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: auto;
+  padding-right: auto;
+}
+.logo-part {
+    color: #{$accent-color};
+}

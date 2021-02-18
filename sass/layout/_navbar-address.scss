@@ -1,0 +1,24 @@
+/*Оформление навбар адреса*/
+.contact-nav {
+  display: flex;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  .link {
+    color: #{$primary-text-color};
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms #{$cubic-transition};
+    &:hover,
+    &:focus {
+      color: #{$accent-color};
+    }
+  }
+}
+.contact-svg {
+  margin-right: 10px;
+  fill: currentColor;
+}

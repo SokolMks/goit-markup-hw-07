@@ -1,0 +1,26 @@
+/*Общие правила*/
+* {
+  margin: 0;
+  padding: 0;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+button {
+  text-decoration: none;
+  border: none;
+
+  &:focus {
+    border-color: #{$accent-color};
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+svg {
+  fill: currentColor;
+}
