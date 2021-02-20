@@ -6,15 +6,15 @@
   margin-bottom: 0;
   padding-left: 0;
   .link {
-    color: #{$primary-text-color};
+    color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    transition: color 250ms #{$cubic-transition};
+    transition: color 250ms var(--cubic-transition);
     &:hover,
     &:focus {
-      color: #{$accent-color};
+      color: var(--accent-color);
     }
   }
 }

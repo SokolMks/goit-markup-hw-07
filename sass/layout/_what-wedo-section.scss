@@ -23,7 +23,7 @@
   left: 0;
   width: 100%;
   padding: 27px 82px;
-  color: #{$primary-background-color};
+  color: var(--primary-background-color);
   background-color:rgba(47, 48, 58, 0.8);
   text-align: center;
   text-transform: uppercase;

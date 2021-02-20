@@ -14,7 +14,7 @@ button {
   border: none;
 
   &:focus {
-    border-color: #{$accent-color};
+    border-color: var(--accent-color);
   }
 }
 img {

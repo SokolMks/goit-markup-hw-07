@@ -1,6 +1,6 @@
 /*Глобальные правила секций*/
 .section-title {
-  color: #{$title-text-color};
+  color: var(--title-text-color);
   letter-spacing: 0.03em;
   font-weight: 700;
   font-size: 36px;

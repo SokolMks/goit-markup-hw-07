@@ -1,4 +1,14 @@
 @charset "UTF-8";
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-background-color: #ffffff;
+  --secondary-background-color: #2f303a;
+  --svg-primary-color: #AFB1B8;
+  --cubic-transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .visually-hidden {
   /*
   position: absolute;
@@ -15,18 +25,18 @@
 
 /*Стилизация частей страницы*/
 header {
-  background-color: #ffffff;
+  background-color: var(--primary-background-color);
 }
 
 body {
-  background-color: #ffffff;
-  color: #757575;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }
 
 footer {
-  background-color: #2f303a;
+  background-color: var(--secondary-background-color);
 }
 
 address {
@@ -53,7 +63,7 @@ button {
 }
 
 button:focus {
-  border-color: #2196f3;
+  border-color: var(--accent-color);
 }
 
 img {
@@ -75,7 +85,7 @@ svg {
 
 /*Глобальные правила секций*/
 .section-title {
-  color: #212121;
+  color: var(--title-text-color);
   letter-spacing: 0.03em;
   font-weight: 700;
   font-size: 36px;
@@ -95,8 +105,8 @@ svg {
 
 /*Оформение кнопок*/
 .btn-hero, .btn-subscribe, .btn-submit {
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: var(--primary-background-color);
   cursor: pointer;
   text-align: center;
   min-width: 200px;
@@ -106,7 +116,7 @@ svg {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  border: 1px solid #2196f3;
+  border: 1px solid var(--accent-color);
 }
 
 .btn-hero {
@@ -116,24 +126,36 @@ svg {
 .btn-subscribe {
   padding: 10px 28px;
   margin-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-box-shadow 250ms var(--cubic-transition);
+  transition: -webkit-box-shadow 250ms var(--cubic-transition);
+  transition: box-shadow 250ms var(--cubic-transition);
+  transition: box-shadow 250ms var(--cubic-transition), -webkit-box-shadow 250ms var(--cubic-transition);
 }
 
 .btn-subscribe:hover, .btn-subscribe:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .btn-submit {
   display: block;
   margin: 0 auto;
   padding: 10px 15px;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-box-shadow 250ms var(--cubic-transition);
+  transition: -webkit-box-shadow 250ms var(--cubic-transition);
+  transition: box-shadow 250ms var(--cubic-transition);
+  transition: box-shadow 250ms var(--cubic-transition), -webkit-box-shadow 250ms var(--cubic-transition);
 }
 
 .btn-submit:hover, .btn-submitfocus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*Оформление лого*/
@@ -148,11 +170,11 @@ svg {
 }
 
 .logo-header:focus, .logo-footer:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .logo-footer {
-  color: #ffffff;
+  color: var(--primary-background-color);
   display: inline-block;
   margin-bottom: 20px;
   margin-right: auto;
@@ -160,42 +182,53 @@ svg {
 }
 
 .logo-part {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 /*Оформление навбара*/
 .header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 80px;
 }
 
 .site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
   margin: 0;
 }
 
 .site-nav .link {
-  color: #212121;
+  color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--cubic-transition);
+  transition: color 250ms var(--cubic-transition);
 }
 
 .site-nav .link:hover, .site-nav .link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .site-nav .link.current {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .nav-item:not(:last-child) {
@@ -203,7 +236,11 @@ svg {
 }
 
 .nav-link, .address-link {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -221,12 +258,14 @@ svg {
   display: block;
   width: 100%;
   height: 4px;
-  background-color: #2196f3;
+  background-color: var(--accent-color);
   border-radius: 2px;
 }
 
 /*Оформление навбар адреса*/
 .contact-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: auto;
   margin-top: 0;
@@ -235,16 +274,17 @@ svg {
 }
 
 .contact-nav .link {
-  color: #757575;
+  color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--cubic-transition);
+  transition: color 250ms var(--cubic-transition);
 }
 
 .contact-nav .link:hover, .contact-nav .link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .contact-svg {
@@ -258,13 +298,17 @@ svg {
 }
 
 .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .street-address {
   display: block;
-  color: #ffffff;
+  color: var(--primary-background-color);
   width: 231px;
   font-size: 14px;
   line-height: 1.71;
@@ -275,18 +319,18 @@ svg {
 }
 
 .contact-address .link {
-  color: #ffffff;
+  color: var(--primary-background-color);
   opacity: 60%;
   font-size: 14px;
   line-height: 1.71;
 }
 
 .contact-address .link:hover, .contact-address .linkfocus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .connected {
-  color: #ffffff;
+  color: var(--primary-background-color);
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -300,6 +344,8 @@ svg {
 }
 
 .join-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -311,16 +357,23 @@ svg {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--primary-background-color);
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms var(--cubic-transition);
+  transition: background-color 250ms var(--cubic-transition);
 }
 
 .join-link:hover, .join-linkfocus {
-  background-color: #2196f3;
+  background-color: var(--accent-color);
 }
 
 .subscribe {
@@ -332,29 +385,47 @@ svg {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--primary-background-color);
   margin-bottom: 20px;
 }
 
 .subscribe-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .subscribe-input {
   display: block;
   background-color: transparent;
-  color: #ffffff;
+  color: var(--primary-background-color);
   width: 385px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding: 15px 0 15px 16px;
   outline: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 250ms var(--cubic-transition);
+  transition: border-color 250ms var(--cubic-transition);
 }
 
 .subscribe-input:focus {
-  border-color: #ffffff;
+  border-color: var(--primary-background-color);
+}
+
+.subscribe-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .subscribe-input::placeholder {
@@ -362,19 +433,22 @@ svg {
 }
 
 .subscribe-btn-pic {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--primary-background-color);
   margin-left: 10px;
 }
 
 /*Оформление героя*/
 .hero {
-  background-color: #2f303a;
+  background-color: var(--secondary-background-color);
   max-width: 1600px;
   height: 600px;
   background-position: center;
   margin-left: auto;
   margin-right: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-background.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background.jpg);
   text-align: center;
   padding-top: 200px;
@@ -382,7 +456,7 @@ svg {
 }
 
 .hero-title {
-  color: #ffffff;
+  color: var(--primary-background-color);
   padding-left: auto;
   padding-right: auto;
   margin-bottom: 30px;
@@ -404,7 +478,8 @@ svg {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 250ms var(--cubic-transition);
+  transition: opacity 250ms var(--cubic-transition);
 }
 
 .backdrop.is-hidden {
@@ -413,18 +488,23 @@ svg {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
   height: 581px;
   width: 528px;
-  background-color: #ffffff;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--primary-background-color);
+  -webkit-transition: -webkit-transform 250ms var(--cubic-transition);
+  transition: -webkit-transform 250ms var(--cubic-transition);
+  transition: transform 250ms var(--cubic-transition);
+  transition: transform 250ms var(--cubic-transition), -webkit-transform 250ms var(--cubic-transition);
   padding: 40px 32px 29px 48px;
   border-radius: 4px;
 }
@@ -435,7 +515,7 @@ svg {
   line-height: 1.15;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .close-button {
@@ -445,14 +525,15 @@ svg {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  background-color: #ffffff;
+  background-color: var(--primary-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--cubic-transition);
+  transition: color 250ms var(--cubic-transition);
 }
 
 .close-button:hover, .close-button:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .closing-cross {
@@ -472,11 +553,12 @@ svg {
   border-radius: 4px;
   padding: 12px 0 12px 42px;
   outline: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 250ms var(--cubic-transition);
+  transition: border-color 250ms var(--cubic-transition);
 }
 
 .form-input:focus {
-  border-color: #2196f3;
+  border-color: var(--accent-color);
 }
 
 .label-title {
@@ -491,12 +573,14 @@ svg {
   position: absolute;
   top: 50%;
   left: 12px;
-  transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: fill 250ms var(--cubic-transition);
+  transition: fill 250ms var(--cubic-transition);
 }
 
 .form-input:focus + .input-icon {
-  fill: #2196f3;
+  fill: var(--accent-color);
 }
 
 .text-input {
@@ -509,11 +593,24 @@ svg {
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 12px 16px;
   margin-bottom: 20px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 250ms var(--cubic-transition);
+  transition: border-color 250ms var(--cubic-transition);
 }
 
 .text-input:focus {
-  border-color: #2196f3;
+  border-color: var(--accent-color);
+}
+
+textarea::-webkit-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea:-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea::-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 textarea::placeholder {
@@ -521,9 +618,15 @@ textarea::placeholder {
 }
 
 .agreement-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   margin-bottom: 30px;
   font-weight: 400;
@@ -536,7 +639,7 @@ textarea::placeholder {
   display: inline-block;
   width: 16px;
   height: 15px;
-  border: 2px solid #212121;
+  border: 2px solid var(--title-text-color);
   border-radius: 2px;
   margin-right: 7px;
 }
@@ -556,12 +659,12 @@ textarea::placeholder {
 }
 
 .agreement-checkbox:focus + .agreement-text::before {
-  outline: 2px solid #212121;
+  outline: 2px solid var(--title-text-color);
 }
 
 .agreement-checkbox:checked + .agreement-text::before {
-  background-color: #2196f3;
-  border-color: #2196f3;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
   background-image: url("../images/icon-tick.svg");
   background-size: contain;
   background-origin: border-box;
@@ -569,7 +672,7 @@ textarea::placeholder {
 
 .agreement-link {
   margin-left: 5px;
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 /*Оформление секции "Почему стоит выбрать нас?"*/
@@ -582,6 +685,8 @@ textarea::placeholder {
 }
 
 .pick-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
   margin: 0;
@@ -590,7 +695,7 @@ textarea::placeholder {
 }
 
 .pick-us .title {
-  color: #212121;
+  color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -608,9 +713,15 @@ textarea::placeholder {
 .pick-us-svg {
   height: 120px;
   background-color: #F5F4FA;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 30px;
   border-radius: 4px;
 }
@@ -625,6 +736,8 @@ textarea::placeholder {
 }
 
 .wedo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
   margin-top: 0;
@@ -645,7 +758,7 @@ textarea::placeholder {
   left: 0;
   width: 100%;
   padding: 27px 82px;
-  color: #ffffff;
+  color: var(--primary-background-color);
   background-color: rgba(47, 48, 58, 0.8);
   text-align: center;
   text-transform: uppercase;
@@ -665,6 +778,8 @@ textarea::placeholder {
 }
 
 .our-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 0;
   margin-bottom: 0;
@@ -676,7 +791,7 @@ textarea::placeholder {
 }
 
 .our-team .title {
-  color: #212121;
+  color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -690,8 +805,9 @@ textarea::placeholder {
 
 .our-team-item {
   width: 270px;
-  background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-background-color);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -708,8 +824,12 @@ textarea::placeholder {
 }
 
 .svg-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .svg-list-item:not(:last-child) {
@@ -720,17 +840,24 @@ textarea::placeholder {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #AFB1B8;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--svg-primary-color);
   background-color: transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--cubic-transition), background-color 250ms var(--cubic-transition);
+  transition: color 250ms var(--cubic-transition), background-color 250ms var(--cubic-transition);
 }
 
 .svg-link:hover, .svg-link:focus {
-  color: #ffffff;
-  background-color: #2196f3;
+  color: var(--primary-background-color);
+  background-color: var(--accent-color);
 }
 
 /*Оформление секции Клиенты*/
@@ -743,6 +870,8 @@ textarea::placeholder {
 }
 
 .clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 1170px;
 }
@@ -757,26 +886,37 @@ textarea::placeholder {
 }
 
 .clients-list-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   width: 100%;
-  border: 1px solid #AFB1B8;
+  border: 1px solid var(--svg-primary-color);
   border-radius: 4px;
-  color: #AFB1B8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--svg-primary-color);
+  -webkit-transition: color 250ms var(--cubic-transition), border-color 250ms var(--cubic-transition);
+  transition: color 250ms var(--cubic-transition), border-color 250ms var(--cubic-transition);
 }
 
 .clients-list-link:hover, .clients-list-link:focus {
-  border-color: #2196f3;
-  color: #2196f3;
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /*Оформление нав кнопок*/
 .nav-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 50px;
   margin-top: 0;
   margin-left: 0;
@@ -795,13 +935,17 @@ textarea::placeholder {
   /* identical to box height, or 162% */
   text-align: center;
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--cubic-transition), background-color 250ms var(--cubic-transition), -webkit-box-shadow 250ms var(--cubic-transition);
+  transition: color 250ms var(--cubic-transition), background-color 250ms var(--cubic-transition), -webkit-box-shadow 250ms var(--cubic-transition);
+  transition: color 250ms var(--cubic-transition), background-color 250ms var(--cubic-transition), box-shadow 250ms var(--cubic-transition);
+  transition: color 250ms var(--cubic-transition), background-color 250ms var(--cubic-transition), box-shadow 250ms var(--cubic-transition), -webkit-box-shadow 250ms var(--cubic-transition);
 }
 
 .nav-buttons .button:hover, .nav-buttons .buttonfocus {
-  background-color: #2196f3;
-  color: #ffffff;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--accent-color);
+  color: var(--primary-background-color);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btn-item:not(:last-child) {
@@ -810,8 +954,11 @@ textarea::placeholder {
 
 /*Оформление секции "Наши проекты"*/
 .projects-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
@@ -831,14 +978,15 @@ textarea::placeholder {
 }
 
 .card {
-  color: #757575;
+  color: var(--primary-text-color);
   display: block;
   font-size: 16px;
   line-height: 1.87;
 }
 
 .card:hover, .card:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .cards-text {
@@ -846,11 +994,12 @@ textarea::placeholder {
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .card-title {
-  color: #212121;
+  color: var(--title-text-color);
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
@@ -875,13 +1024,18 @@ textarea::placeholder {
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  color: #ffffff;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-background-color);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 250ms var(--cubic-transition);
+  transition: -webkit-transform 250ms var(--cubic-transition);
+  transition: transform 250ms var(--cubic-transition);
+  transition: transform 250ms var(--cubic-transition), -webkit-transform 250ms var(--cubic-transition);
   padding: 63px 24px;
 }
 
 .project-item:hover .card-overlay {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 /*# sourceMappingURL=main.css.map */

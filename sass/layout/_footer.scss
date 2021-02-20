@@ -8,7 +8,7 @@
 }
 .street-address {
   display: block;
-  color: #{$primary-background-color};
+  color: var(--primary-background-color);
   width: 231px;
   font-size: 14px;
   line-height: 1.71;
@@ -18,19 +18,19 @@
 }
 .contact-address{
   .link {
-    color: #{$primary-background-color};
+    color: var(--primary-background-color);
     opacity: 60%;
     
     font-size: 14px;
     line-height: 1.71;
     &:hover,
     &focus {
-      color: #{$accent-color};
+      color: var(--accent-color);
     }
   }
 }
 .connected {
-  color: #{$primary-background-color};
+  color: var(--primary-background-color);
   margin-bottom: 20px; 
   font-weight: 700;
   font-size: 14px;
@@ -53,12 +53,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #{$primary-background-color};
+    color: var(--primary-background-color);
     background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 250ms #{$cubic-transition};
+    transition: background-color 250ms var(--cubic-transition);
     &:hover,
     &focus {
-      background-color: #{$accent-color};
+      background-color: var(--accent-color);
     }
   }
 }
@@ -69,7 +69,7 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    color: #{$primary-background-color};
+    color: var(--primary-background-color);
     margin-bottom: 20px;
   }
   &-form {
@@ -80,15 +80,15 @@
 .subscribe-input {
   display: block;
   background-color: transparent;
-  color: #{$primary-background-color};
+  color: var(--primary-background-color);
   width: 385px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding: 15px 0 15px 16px;
   outline: none;
-  transition: border-color 250ms #{$cubic-transition};
+  transition: border-color 250ms var(--cubic-transition);
   &:focus {
-    border-color: #{$primary-background-color};
+    border-color: var(--primary-background-color);
   }
   &::placeholder{
     color:rgba(255, 255, 255, 0.6);
@@ -96,6 +96,6 @@
 }
 .subscribe-btn-pic {
   display: inline-flex;
-  fill: #{$primary-background-color};
+  fill: var(--primary-background-color);
   margin-left: 10px;
 }

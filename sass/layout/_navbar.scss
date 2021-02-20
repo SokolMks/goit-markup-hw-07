@@ -15,18 +15,18 @@
   padding-left: 0;
   margin: 0;
   .link {
-    color: #{$title-text-color};
+    color: var(--title-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    transition: color 250ms #{$cubic-transition};
+    transition: color 250ms var(--cubic-transition);
     &:hover,
     &:focus {
-      color: #{$accent-color};
+      color: var(--accent-color);
     }
     &.current{
-      color: #{$accent-color};
+      color: var(--accent-color);
     }
   }
 }
@@ -49,7 +49,7 @@
     display: block;
     width: 100%;
     height: 4px;
-    background-color: #{$accent-color};
+    background-color: var(--accent-color);
     border-radius: 2px;
   }
 }

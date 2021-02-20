@@ -1,6 +1,6 @@
 /*Оформление героя*/
 .hero {
-  background-color: #{$secondary-background-color};
+  background-color: var(--secondary-background-color);
   max-width: 1600px;
   height: 600px;
   background-position: center;
@@ -15,7 +15,7 @@
   padding-top: 200px;
   padding-bottom: 200px;
   &-title{
-    color: #{$primary-background-color};
+    color: var(--primary-background-color);
     padding-left: auto;
     padding-right: auto;
     margin-bottom: 30px;
